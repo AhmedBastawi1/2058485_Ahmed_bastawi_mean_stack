@@ -1,0 +1,73 @@
+
+
+h1{
+ color: blue;
+}
+h2{
+    margin: 40px;
+
+    color: red;
+
+}
+h3{
+
+   color: green; 
+   margin: 40px;
+}
+h4{
+
+  color: rgb(235, 78, 169);  
+}
+h5{
+
+ color: darkblue;   
+ background-color: gray;
+}
+h6{
+color: darkorange;
+   background-color: grey; 
+}
+p{
+color: rgb(148, 11, 82);
+ }
+.top{
+    padding: 1em;
+    height: 8%;
+    text-align: center;
+    background-color: black;
+
+}
+.login{
+    color: burlywood;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+ 
+
+.ingredients{
+    background-color: lightgrey;
+    width: 900px;
+    border: 10px solid rgb(158, 245, 77);
+    padding: 50px;
+    margin: 20px;
+    color: rgb(148, 11, 82);  
+    ;
+  }
+
+  .method
+  {
+    background-color: lightgrey;
+    width: 900px;
+    border: 10px solid greenyellow;
+    padding: 50px;
+    margin: 20px;
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body{
+background-color: lightyellow;
+  }
