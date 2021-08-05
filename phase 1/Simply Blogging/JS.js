@@ -1,5 +1,6 @@
 function addData() {
 //This code create tags 
+    var div = document.createElement("div"); 
     var title = document.getElementById("title").value;
     var article = document.getElementById("article").value;
     var url = document.getElementById("imageURL1").value;
@@ -16,7 +17,6 @@ function addData() {
         return;
     }
 // div
-    var div = document.createElement("div"); 
     document.getElementById("info").appendChild(div);
     div.setAttribute("style","color:black;border:7px blue solid; display: inline-block; margin: 20px; word-wrap:break-word; background: silver; overflow-y: scroll; width:320px ;height: 250px"); 
 //title
@@ -32,8 +32,7 @@ function addData() {
     var articlePTag = document.createElement("p");
     var articlePTagContent = document.createTextNode("   article is : "+article);
     articlePTag.appendChild(articlePTagContent);
-    div.appendChild(articlePTag);
-    articlePTag.setAttribute("style", "color black");  
+    di.appendChild(articlePTag);
 }
 
 
