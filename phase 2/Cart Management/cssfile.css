@@ -1,0 +1,19 @@
+.Fbox{
+    background-color: lightgrey;
+    width:  350px;
+    height: 350px;
+    border: 30px solid rgb(158, 245, 77);
+    padding: 50px;
+    margin: 20px;
+    color: rgb(148, 11, 82);  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    display: inline-block;
+  }
+  img{
+    border-radius: 20px;
+   width: 150px;
+   height: 100px;
+
+  }
