@@ -1,0 +1,128 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--  -->
+<nav class="navbar navbar-expand-lg navbar-red bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Home</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation" >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">About Us</a>
+              <a class="nav-link" href="#">Contacts</a>
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+                >Disabled</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+<!--  -->
+<div class="container">
+    <div *ngIf="FlogIn" class="Fbox" >
+        <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6"><h1> login form </h1> </div>
+    </div><br>
+            <form [formGroup]="loginRef" (ngSubmit)="checkUser()" class="form-group">
+                <div class="row"> 
+                <div class="col-2"><label>UserName</label></div> 
+               <div  class="col-3"><input type="text" formControlName="user"/></div>
+               </div> 
+               <div class="row"> 
+                <div class="col-2"><label>Password</label></div>
+                <div  class="col-3"><input type="password" formControlName="pass"/></div>
+            </div>
+        <br/>
+        <div class="row">
+            <div class="col-2"><input type="submit" value="Login" [disabled]="!loginRef.valid" class="btn btn-success"/> </div>
+            <div class="col-2"><input type="reset" value="reset" class="btn btn-secondary"/> </div>
+        </div>
+            </form>
+            <br><br><div class="row">
+            <div class="col-3"></div><div class="col-3"></div><div class="col-3"></div>
+            <div class="col-3"><input type="button" [value]="b1" (click)="Login()" class="btn btn-link"/></div>
+    </div></div>
+</div>
+<!--  -->
+<div class="container">
+    <div *ngIf="FsignUp" class="Fbox">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6"><h4>Registration Form</h4></div>
+    </div>
+    <div class="row">
+        <div class="col-6"></div><div class="col-2"></div><div class="col-2"></div>
+        <div class="col-2"><input type="button" value="Login" (click)="SignUp()" class="btn btn-link"/></div>
+    </div>
+        <form  [formGroup]="SignupRef" (ngSubmit)="adduser()">
+            <div class="row">
+                <div class="col-3"> <label >First Name</label></div>
+                <div class=" col-3"><input type="text" formControlName="firstname"></div>
+            </div> 
+            <div class="row">
+                <div class="col-3"><label >Last Name</label> </div> 
+                <div class="col-3"><input type="text" formControlName="lastname"> </div> 
+            </div> 
+            <div class="row">
+                <div class="col-3"><label >Username</label></div>
+                <div class="col-3"><input type="text" formControlName="username"></div>
+            </div>
+             <div class="row">
+                <div class="col-3"><label >Password</label></div>
+                <div class="col-3"><input type="password" formControlName="password"></div>
+            </div><br><br>
+            <div class="row">
+                <div class="col-3"><input type="button" value="Register" [disabled]="!SignupRef.valid" (click)="adduser()"  class="btn btn-success"/></div>
+                <div class="col-2"><input type="reset" value="reset"  class="btn btn-secondary"/></div>
+                </div>
+        </form>
+    </div>
+</div>
+<!--  -->
+<div class="container">
+    <div *ngIf="FportFolio" class="Fbox" style="height: auto;">
+        <div class="row">
+            <div class="col-6"></div><div class="col-4"></div>
+            <div class="col-2"><input type="button" value="Sign out" (click)="signout()" class="btn btn-link"/></div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-6"><h2>my portfolio</h2></div>
+        </div>
+        <h4>Welcome {{name}}</h4>
+<div class="row">
+    <div class="col-4"><label>Contact Name : </label></div>
+    <div class="col-2"><input type="text" #nameRef/></div>
+    </div>
+<div class="row">
+    <div class="col-4"> <label>Phone No. : </label></div>
+    <div class="col-2"><input type="text" #phoneRef/></div>
+</div> <br>
+<input type="button" value="save" 
+(click)="addContact(nameRef,phoneRef)" class="btn btn-success"/><br/> <br>
+
+<input type="button" [value]="btable"  (click)="showtable()" class="btn btn-secondary"/>
+<div *ngIf="showTable">
+    <table border="1"class="table table-striped">
+        <thead class="table-dark" style="color:red;">
+        <tr>
+            <th>Name </th>
+            <th>Phone No.</th>
+        </tr>
+    </thead>
+        <TR *ngFor="let cont of contacts">
+            <td>{{cont.name}}</td>
+            <td>{{cont.phone}}</td>
+        </TR>
+    </table>
+</div>
+
+</div>
