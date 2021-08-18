@@ -1,0 +1,57 @@
+<mat-grid-list cols="1" rowHeight="20:1">
+  <mat-grid-tile><H1>Task Traker</H1></mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="2" rowHeight="20:1">
+  <mat-grid-tile><H1>To-Do-Tasks</H1></mat-grid-tile>
+  <mat-grid-tile><h1>To-Do-List</h1></mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+    <form  (ngSubmit)=" addtask(idRef,usernameRef,taskRef,dateRef)">
+          <mat-form-field appearance="legacy">
+            <mat-label>ID</mat-label>
+            <input matInput placeholder="Your ID" #idRef>
+            <mat-hint></mat-hint>
+          </mat-form-field><br>
+          <mat-form-field appearance="legacy">
+            <mat-label>UserName</mat-label>
+            <input matInput placeholder="Your UserName" #usernameRef>
+          </mat-form-field><br>
+          <mat-form-field appearance="legacy">
+            <mat-label>Task</mat-label>
+            <textarea matInput placeholder="Your Task" #taskRef></textarea>
+          </mat-form-field><br>
+          <mat-form-field class="example-full-width" appearance="legacy">
+            <mat-label>Dead Line</mat-label>
+            <input matInput [matDatepicker]="picker" #dateRef>
+            <mat-datepicker-toggle matSuffix [for]="picker">
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <br/>
+          <button mat-raised-button color="accent">Submit</button>
+          <button type="reset" mat-stroked-button color="warn">reset</button>
+    </form>
+  </mat-grid-tile>
+  <mat-grid-tile>     
+    <table >
+      <ng-container matColumnDef="position">
+        <tr>
+          <th>ID</th>
+          <th>UserName</th>
+          <th>Task</th>
+          <th>Dead Line</th>
+        </tr>
+        <tr *ngFor="let emp of tasks">
+          <td>{{emp.id}}</td>
+          <td>{{emp.username}}</td>
+          <td>{{emp.Ftask}}</td>
+          <td>{{emp.deadline}}</td>
+        </tr>
+      </ng-container>
+    </table>
+  </mat-grid-tile>
+</mat-grid-list> 
+
+
