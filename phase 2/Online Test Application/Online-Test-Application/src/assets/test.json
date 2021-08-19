@@ -1,0 +1,45 @@
+[
+
+    {"question":"Which country operationalized world’s largest radio telescope?",
+        "ans1":"A. USA","ans2":"B. China","ans3":"C. Russia","ans4":"D. India",
+        "correctAns":"B. China"},
+
+    {"question":"Katerina Sakellaropoulou was elected the first woman President of",
+        "ans1":"A. Greece","ans2":"B. Spain","ans3":"C. Finland","ans4":"D. Netherland",
+        "correctAns":"A. Greece"},
+
+    {"question":"Which one among the following radiations carries maximum energy?",
+        "ans1":"A. Ultraviolet rays","ans2":"B. Gamma rays","ans3":"C. X- rays","ans4":"D. Infra-red rays",
+        "correctAns":"B. Gamma rays"},
+
+    {"question":"The head quarters of world trade organization is in",
+        "ans1":"A. Montreal","ans2":"B. Seattle","ans3":"C. Geneva","ans4":"D. the Hague",
+        "correctAns":"C. Geneva"},
+
+    {"question":"Which state has the largest population?",
+        "ans1":"A. Uttar Pradesh","ans2":"B. Maharastra","ans3":"C. Bihar","ans4":"D. Andra Pradesh",
+        "correctAns":"A. Uttar Pradesh"},
+
+    {"question":"Entomology studies what?",
+        "ans1":"A. Behavior of human beings","ans2":"B. Insects","ans3":"C. The origin and history of technical and scientific terms","ans4":"D. The formation of rocks",
+        "correctAns":"B. Insects"},
+
+    {"question":"Indian player Jude Felix is popular for which sports?",
+        "ans1":"A. Volleyball","ans2":"B. Football","ans3":"C. Hockey","ans4":"D. Tennis",
+        "correctAns":"C. Hockey"},
+
+    {"question":"4*9-6+20",
+        "ans1":"A. 90","ans2":"B. 40","ans3":"C. 60","ans4":"D. 20",
+        "correctAns":"C. 60"},
+
+    {"question":"The Second Italian Satellite launched from Soviet Union was",
+        "ans1":"A. Rohini","ans2":"B. Aryabhata","ans3":"C. Bhaskar–1","ans4":"D. Apsara",
+        "correctAns":"C. Bhaskar–1"},
+
+    {"question":"J.B. Dunlop is popular for which of the following inventions?",
+        "ans1":"A. Model airplanes","ans2":"B. Pneumatic rubber tire","ans3":"C. Rubber boot","ans4":"D. Automobile wheel rim",
+        "correctAns":"B. Pneumatic rubber tire"}
+
+
+
+]
