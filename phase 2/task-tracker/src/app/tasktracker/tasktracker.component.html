@@ -1,12 +1,4 @@
-<mat-grid-list cols="1" rowHeight="20:1">
-  <mat-grid-tile><H1>Task Traker</H1></mat-grid-tile>
-</mat-grid-list>
-<mat-grid-list cols="2" rowHeight="20:1">
-  <mat-grid-tile><H1>To-Do-Tasks</H1></mat-grid-tile>
-  <mat-grid-tile><h1>To-Do-List</h1></mat-grid-tile>
-</mat-grid-list>
-<mat-grid-list cols="2" rowHeight="2:1">
-  <mat-grid-tile>
+
     <form  (ngSubmit)=" addtask(idRef,usernameRef,taskRef,dateRef)">
           <mat-form-field appearance="legacy">
             <mat-label>ID</mat-label>
@@ -30,11 +22,10 @@
           </mat-form-field>
 
           <br/>
-          <button mat-raised-button color="accent">Submit</button>
-          <button type="reset" mat-stroked-button color="warn">reset</button>
+          <button >Submit</button>
+          <button type="reset">reset</button>
     </form>
-  </mat-grid-tile>
-  <mat-grid-tile>     
+    
     <table >
       <ng-container matColumnDef="position">
         <tr>
@@ -51,7 +42,6 @@
         </tr>
       </ng-container>
     </table>
-  </mat-grid-tile>
-</mat-grid-list> 
+
 
 
