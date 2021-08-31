@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="cssfile.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/JavaScript">
+      var socket=io();
+      socket.emit("obj","Hello Server I am Web Socket Client")
+      socket.on("obj1",(msg)=>{
+        console.log(msg);
+        var p = document.createElement("p"); 
+        document.getElementById("info").appendChild(p)
+        var msgPTag = document.createElement("p");
+        var msgPTagContent = document.createTextNode("Server: "+msg);
+        msgPTag.appendChild(msgPTagContent);
+        p.appendChild(msgPTag);  
+      })
+      socket.on("clientObj",(msg)=>{
+        info=()=>{
+                let Message = document.getElementById("Message").value;
+                let name = document.getElementById("name").value;
+                socket.emit("clientObj",Message)
+                    var p = document.createElement("p"); 
+                    document.getElementById("info").appendChild(p);
+                    var msgPTag = document.createElement("p");
+                    var msgPTagContent = document.createTextNode( name +": "+Message);
+                    msgPTag.appendChild(msgPTagContent);
+                    p.appendChild(msgPTag);
+                    document.getElementById("Message").value="";
+
+                    var p = document.createElement("p"); 
+                    document.getElementById("info").appendChild(p);
+                    var msgPTag = document.createElement("p");
+                    var msgPTagContent = document.createTextNode("Server: "+msg);
+                    msgPTag.appendChild(msgPTagContent);
+                    p.appendChild(msgPTag);        
+                }
+        })
+   </script>
+</head>
+<body>
+    <div class="container">
+       <br> <h1>chat</h1>
+        <div id="info" class="chatbox"></div>
+        <form class="form-group" action="register">
+            <div class="row">
+                <div class="col-2"><label>Name: </label></div>
+                <divclass="col-3"><input type="text" id="name" class="form-control" /></div>
+            <div class="row">
+                <div class="col-2"><label>Message: </label></div>
+                <divclass="col-3"><input type="text" id="Message" class="form-control" /></div>
+            <div class="row">
+                <div class="col-2"><input type="button" value="send" onclick="info()" class="btn btn-outline-warning" /></div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.chatbox{
+    background-color:rgb(93, 204, 238);
+    width: 1000px;
+    height: 450px;
+    border: 30px solid rgb(82, 73, 204);
+    padding: 5px;
+    margin: 2px;
+    color: rgb(148, 11, 82);  
+    margin-top: 20px;
+    display: inline-block;
+    word-wrap: break-word;
+    overflow-y: auto;
+}
+label{
+    color: red;
+}
